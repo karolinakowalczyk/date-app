@@ -1,0 +1,19 @@
+@import 'variables';
+
+html, body {
+  height: 100vh !important;
+  width: 100vw !important;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+//   overflow-x: hidden; /* Prevent horizontal scroll globally */
+  
+  background-color: $body-bg;
+  color: $text-color;
+}
+
+// .main {
+//   min-height: 100vh; /* Full viewport height */
+// }
