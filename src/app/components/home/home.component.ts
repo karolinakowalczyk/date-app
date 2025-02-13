@@ -11,6 +11,10 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   private router = inject(Router);
 
+  goToAccept() {
+    this.router.navigate(['/yes']);
+  }
+
   goToRefusal() {
     this.router.navigate(['/no']);
   }

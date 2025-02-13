@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+
+::ng-deep .ngb-tp-input {
+    color: $primary
+}
+
+::ng-deep .ngb-dp-weekday {
+    color: $secondary !important
+}
+
+::ng-deep.btn-link.ngb-dp-arrow-btn {
+    color: $secondary !important
+}
+
+::ng-deep ngb-datepicker.dropdown-menu {
+  background-color: #f8f9fa;
+}
+
+::ng-deep ngb-datepicker-navigation-select>.form-select {
+    background-color: #f8f9fa;
+}

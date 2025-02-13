@@ -1,0 +1,6 @@
+<h1 class="text-primary">Are you free on...</h1>
+<p>Select date and time</p>
+<input class="form-control text-primary" placeholder="Select date" ngbDatepicker #d="ngbDatepicker"
+    [(ngModel)]="selectedDate" (click)="d.toggle()" />
+<ngb-timepicker class="text-primary" [(ngModel)]="selectedTime"></ngb-timepicker>
+<button type="button" class="btn btn-secondary w-auto" (click)="goToEatType()">Sumbit</button>
