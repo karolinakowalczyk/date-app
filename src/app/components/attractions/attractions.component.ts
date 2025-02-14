@@ -1,23 +1,23 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Activity } from '../../interfaces/activity';
+import { ActivitiesComponent } from '../activities/activities.component';
 
 @Component({
   selector: 'app-attractions',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ActivitiesComponent],
   templateUrl: './attractions.component.html',
   styleUrl: './attractions.component.scss',
 })
 export class AttractionsComponent {
-  protected attractionName: string = '';
-  protected attractionImgUrl: string = '';
+  protected readonly nextPage = 'last-page';
 
-  readonly noAttractionImg =
+  protected readonly noAttractionImg: string =
     'https://static.vecteezy.com/system/resources/thumbnails/053/824/689/small_2x/cute-heart-illustration-with-smiling-face-and-pastel-colors-png.png';
 
-  protected attractions = [
+  protected attractions: Activity[] = [
     {
       name: 'Zoo',
       imgUrl:
@@ -56,22 +56,7 @@ export class AttractionsComponent {
     },
   ];
 
-  private router = inject(Router);
-
-  protected selectOption(attraction: any): void {
-    attraction.selected = !attraction.selected;
-  }
-
-  protected addNewAttraction(): void {
-    //add to database
-    this.attractions.push({
-      name: this.attractionName,
-      imgUrl: this.attractionImgUrl,
-      selected: false,
-    });
-  }
-
-  protected goToLastPage(): void {
-    this.router.navigate(['/last-page']);
+  protected addAttraction(newAttraction: Activity): void {
+    this.attractions.push(newAttraction);
   }
 }

@@ -1,0 +1,23 @@
+<div class="activities-container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @for(activity of activities; track activity){
+        <div class="col card" (click)="selectOption(activity)" [ngClass]="activity.selected ? 'selected' : ''">
+            <img [src]="activity.imgUrl ? activity.imgUrl : noActivityImg" class="card-img-top" [alt]="activity.name">
+            <div class="card-body">
+                <h5 class="card-title text-primary">{{activity.name}}</h5>
+            </div>
+        </div>
+        }
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center mt-4">
+        <h2>Add new eat option!</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+            <label>Food name</label>
+            <input [(ngModel)]="activityName" class="w-50" />
+            <label>Food image url</label>
+            <input [(ngModel)]="activityImgUrl" class="w-50" />
+        </div>
+        <button type="button" class="btn btn-secondary w-auto mt-4" (click)="addNewActivity()">Add</button>
+    </div>
+    <button type="button" class="btn btn-secondary w-auto mt-4" (click)="goToNextPage()">{{submitBtnText}}</button>
+</div>
