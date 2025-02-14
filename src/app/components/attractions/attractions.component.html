@@ -1,2 +1,3 @@
-<app-activities [nextPage]="nextPage" [noActivityImg]="noAttractionImg" [activities]="attractions"
-    [submitBtnText]="'Last page'" (newActivity)="addAttraction($event)"></app-activities>
+<app-activities [nextPage]="nextPage" [noActivityImg]="noAttractionImg" [activities]="attractions" [title]="title"
+    [submitBtnText]="'Last page'" (newActivity)="addAttraction($event)"
+    (selectedActivites)="submitSelectedAttractions($event)"></app-activities>
