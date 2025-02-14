@@ -14,8 +14,9 @@ import { Activity } from '../../interfaces/activity';
 export class ActivitiesComponent {
   @Input() nextPage = '';
   @Input() noActivityImg = '';
-  @Input() activities: Activity[] = [];
   @Input() submitBtnText = 'Submit';
+  @Input() title = '';
+  @Input() activities: Activity[] = [];
 
   @Output() newActivity: EventEmitter<Activity> = new EventEmitter();
   protected activityName: string = '';

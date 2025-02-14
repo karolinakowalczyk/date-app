@@ -14,6 +14,8 @@ import { ActivitiesComponent } from '../activities/activities.component';
 export class AttractionsComponent {
   protected readonly nextPage = 'last-page';
 
+  protected readonly title = 'Add new couple activities';
+
   protected readonly noAttractionImg: string =
     'https://static.vecteezy.com/system/resources/thumbnails/053/824/689/small_2x/cute-heart-illustration-with-smiling-face-and-pastel-colors-png.png';
 

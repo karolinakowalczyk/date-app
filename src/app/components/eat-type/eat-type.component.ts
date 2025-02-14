@@ -13,6 +13,9 @@ import { ActivitiesComponent } from '../activities/activities.component';
 })
 export class EatTypeComponent {
   protected readonly nextPage: string = 'attractions';
+
+  protected readonly title = 'Add new food';
+
   protected readonly noFoodImg =
     'https://www.creativefabrica.com/wp-content/uploads/2021/02/14/Kawaii-Cute-Panecake-Food-Graphics-8601102-1.png';
 
