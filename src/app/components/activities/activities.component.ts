@@ -19,6 +19,8 @@ export class ActivitiesComponent {
   @Input() activities: Activity[] = [];
 
   @Output() newActivity: EventEmitter<Activity> = new EventEmitter();
+  @Output() selectedActivites: EventEmitter<Activity[]> = new EventEmitter();
+
   protected activityName: string = '';
   protected activityImgUrl: string = '';
 
@@ -30,13 +32,22 @@ export class ActivitiesComponent {
 
   protected addNewActivity(): void {
     this.newActivity.emit({
+      id: this.activities.length + 1,
       name: this.activityName,
       imgUrl: this.activityImgUrl,
       selected: false,
     });
+    this.activityName = '';
+    this.activityImgUrl = '';
+  }
+
+  private getSelectedActivities(): Activity[] {
+    let selected: Activity[] = this.activities.filter((act) => act.selected);
+    return selected;
   }
 
   protected goToNextPage(): void {
+    this.selectedActivites.emit(this.getSelectedActivities());
     this.router.navigate([`/${this.nextPage}`]);
   }
 }
