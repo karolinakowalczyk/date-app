@@ -1,0 +1,24 @@
+@import '../../../styles/variables';
+
+:host {
+    display: flex;
+    justify-content: center;
+}
+
+.activities-container {
+    max-width: 80%;
+    padding: 24px 0;
+}
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.selected {
+    background-color: $secondary;
+}
