@@ -1,12 +1,11 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-last-page',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './last-page.component.html',
-  styleUrl: './last-page.component.scss'
+  styleUrl: './last-page.component.scss',
 })
-export class LastPageComponent {
-
-}
+export class LastPageComponent {}

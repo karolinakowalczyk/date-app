@@ -1,10 +1,11 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accept',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './accept.component.html',
   styleUrl: './accept.component.scss',
 })

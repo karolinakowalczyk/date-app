@@ -1,13 +1,15 @@
 @if (counter === 0) {
 <div class="blue-screen__container">
-    <img src="https://winbuzzer.com/wp-content/uploads/2016/08/Windows-10-BSOD-fLIKR.jpg" alt="blue screen"
-        class="img-fluid" />
+    <img class="desktop-img"
+        ngSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bsodwindows10.png/1200px-Bsodwindows10.png"
+        alt="blue screen desktop" class="img-fluid" fill />
+    <img class="mobile-img" ngSrc="https://i.imgur.com/sY6DsS8g.jpg" alt="blue screen mobile" class="img-fluid" fill />
 </div>
 }
 @else {
 <h1 class="text-primary">
     {{ counter }}
 </h1>
-<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWJ1ZGVndjJ0ejk5djN3bnF4c25hbHdxd3ZuN3B6dmxiYzN2OXNidCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eXUlPn1gmZavu/giphy.gif"
-    alt="angry pockemon" class="img-fluid" />
+<img ngSrc="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWJ1ZGVndjJ0ejk5djN3bnF4c25hbHdxd3ZuN3B6dmxiYzN2OXNidCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eXUlPn1gmZavu/giphy.gif"
+    alt="angry pockemon" class="img-fluid" priority width="300" height="200" />
 }

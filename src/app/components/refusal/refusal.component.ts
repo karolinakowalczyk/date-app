@@ -1,9 +1,10 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-refusal',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './refusal.component.html',
   styleUrl: './refusal.component.scss',
 })
